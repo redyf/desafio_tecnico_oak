@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sistema de Cadastro e Listagem de Produtos
 
-## Getting Started
+Um aplicativo web desenvolvido com Next.js para gerenciar produtos, permitindo cadastro e listagem com funcionalidades específicas.
 
-First, run the development server:
+## Funcionalidades (Como requisitado)
+
+### Cadastro de Produtos
+
+- Formulário com os seguintes campos:
+  - Nome do produto (texto)
+  - Descrição do produto (texto)
+  - Valor do produto (número)
+  - Disponível para venda (sim/não)
+
+### Listagem de Produtos
+
+- Exibição em tabela com as colunas:
+  - Nome do produto
+  - Valor do produto
+  - Disponibilidade
+- Ordenação automática por valor (do menor para o maior)
+- Botão para adicionar novo produto
+- Transição automática para listagem após cadastro
+
+## Tecnologias Utilizadas
+
+- Next.js 14
+- React
+- TypeScript
+- Tailwind CSS
+
+## Como Executar o Projeto
+
+1. Clone o repositório:
+
+```bash
+git clone [URL_DO_REPOSITÓRIO]
+cd cadastro_e_listagem_de_produtos
+```
+
+2. Instale as dependências:
+
+```bash
+npm install
+# ou
+yarn install
+# ou
+pnpm install
+# ou
+bun install
+```
+
+3. Execute o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
-# or
+# ou
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Acesse o aplicativo:
+   Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Estrutura do Projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+  ├── app/
+  │   └── page.tsx         # Página principal
+  ├── components/
+  │   ├── FormularioProduto.tsx  # Componente do formulário
+  │   └── ListagemProdutos.tsx   # Componente da listagem
+  └── types/
+      └── produto.ts       # Definição de tipos
+```
 
-## Learn More
+## Licença
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este projeto está sob a licença MIT.
